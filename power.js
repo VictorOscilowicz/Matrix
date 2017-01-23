@@ -10,13 +10,13 @@ let A = Matrix([
 function power(mtrx,p){
     //mtrx is the matrix you input
     //p is the power of the matrix you want
-    for(p=0;p<100;p++){
-
+  let a = mtrx;
+    for(i=0;i<p;i++){
+      a = Matrix(a.prod(mtrx));
     }
-let B = Matrix(A.prod(A));
-let C = Matrix()
+  return a;
 }
 
 
 //testing code
-console.log(power(A,10));
+console.log(power(A,10)());
